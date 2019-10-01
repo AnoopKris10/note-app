@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="32dp">
+
+
+        <LinearLayout
+            android:id="@+id/MainLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="40dp">
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutSem1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <Button
+
+                    android:id="@+id/ButtonSem1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Semester 1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutSem2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/ButtonSem2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:text="Semester 2"
+                    tools:layout_marginTop="50dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutSem3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <Button
+
+                    android:id="@+id/ButtonSem3"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:text="Semester 3"
+                    tools:layout_marginTop="50dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutSem4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/ButtonSem4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Semester 4"
+                    tools:layout_marginTop="50dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutSem5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/ButtonSem5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Semester 5"
+                    tools:layout_marginTop="50dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutSem6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/ButtonSem6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Semester 6"
+                    tools:layout_marginTop="50dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutSem7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/ButtonSem7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Semester 7"
+                    tools:layout_marginTop="50dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutSem8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/ButtonSem8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Semester 8"
+                    tools:layout_marginTop="50dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutLogout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/ButtonLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
+                    tools:layout_marginTop="50dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

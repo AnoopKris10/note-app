@@ -1,9 +1,17 @@
 package com.example.notesrepo;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
+import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,70 +21,45 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+/*
+* code by: Anoop Krishna Y
+*
+*
+*
+* */
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText emailId,password;
-    Button btnsignup;
-    TextView tvsignin;
-    FirebaseAuth mFirebaseAuth;
+    FirebaseUser user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mFirebaseAuth = FirebaseAuth.getInstance();
-        emailId = findViewById(R.id.editText);
-        password = findViewById(R.id.editText2);
-        btnsignup = findViewById(R.id.button);
-        tvsignin = findViewById(R.id.textView2);
-        btnsignup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String email = emailId.getText().toString();
-                String pwd = password.getText().toString();
-                if(email.isEmpty()){
-                    emailId.setError("please enter email ID");
-                    emailId.requestFocus();
-                }
-                else if(pwd.isEmpty()){
-                    password.setError("please enter password");
-                    password.requestFocus();
-                }
-                else if(email.isEmpty() && pwd.isEmpty()){
-                    Toast.makeText(MainActivity.this,"fields are empty",Toast.LENGTH_SHORT).show();
-                }
-                else if(!(email.isEmpty() && pwd.isEmpty())){
-                    mFirebaseAuth.createUserWithEmailAndPassword(email,pwd).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(!task.isSuccessful()){
-                                Toast.makeText(MainActivity.this,"sign up unsuccessful,try again",Toast.LENGTH_SHORT).show();
-                            }
-                            else{
-                                startActivity(new Intent(MainActivity.this,LoginActivity.class));
 
-                            }
-                        }
-                    });
-                }
-                else{
-                    Toast.makeText(MainActivity.this,"error occured!",Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-        tvsignin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this,LoginActivity.class);
-                startActivity(i);
-            }
-        });
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
+        user = mAuth.getCurrentUser();
+
+        if(user!=null)
+        {
+            startActivity(new Intent(this,HomePage.class));
+        }
+        else
+        {
+            startActivity(new Intent(MainActivity.this,LoginPage.class));
+            finish();
+        }
+
     }
-
-
 }
+
 

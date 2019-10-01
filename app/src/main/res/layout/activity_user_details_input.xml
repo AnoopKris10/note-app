@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserDetailsInput">
+
+    <Button
+        android:id="@+id/DoneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/MobilenoEditText"
+        app:layout_constraintStart_toStartOf="@+id/MobilenoEditText"
+        app:layout_constraintTop_toBottomOf="@+id/MobilenoEditText" />
+
+    <EditText
+        android:id="@+id/FullNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="270dp"
+        android:ems="10"
+        android:hint="Full Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/MobilenoEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Mobile Number"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@+id/FullNameEditText"
+        app:layout_constraintStart_toStartOf="@+id/FullNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/FullNameEditText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
