@@ -4,28 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#363837"
     tools:context=".LoginPage">
 
 
     <EditText
         android:id="@+id/EmailLoginEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="340dp"
+        android:background="@drawable/rounded_edittext"
         android:ems="10"
         android:hint="Email"
+        android:textColorHint="#a0000000"
         android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/logo"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/PasswordLoginEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:ems="10"
+        android:background="@drawable/rounded_edittext"
+        android:padding="10dp"
         android:hint="Password"
+        android:textColorHint="#a0000000"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/EmailLoginEditText"
         app:layout_constraintStart_toStartOf="@+id/EmailLoginEditText"
@@ -36,17 +44,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Forgot Password?Click Here"
+        android:text="Forgot Password?"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/PasswordLoginEditText"
         app:layout_constraintStart_toStartOf="@+id/PasswordLoginEditText"
         app:layout_constraintTop_toBottomOf="@+id/PasswordLoginEditText" />
 
     <Button
         android:id="@+id/LoginButton"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Login"
+        android:elevation="10dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"
         app:layout_constraintEnd_toEndOf="@+id/ForgotPasswordTextView"
         app:layout_constraintStart_toStartOf="@+id/ForgotPasswordTextView"
         app:layout_constraintTop_toBottomOf="@+id/ForgotPasswordTextView" />
@@ -57,10 +69,21 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="70dp"
-        android:text="Not Registered?Register Now"
+        android:textColor="#FFFFFF"
+        android:text="Not Registered? Register Now."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/LoginButton"
         app:layout_constraintStart_toStartOf="@+id/LoginButton"
         app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="190dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_noteflix" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

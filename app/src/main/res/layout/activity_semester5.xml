@@ -4,14 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#363837"
     tools:context=".Semester5Activity">
 
 
     <Button
         android:id="@+id/ButtonCs510"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"
         android:text="CS510"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,8 +22,10 @@
 
     <Button
         android:id="@+id/ButtonCs520"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"
         android:layout_marginTop="48dp"
         android:text="CS520"
         app:layout_constraintEnd_toEndOf="@+id/ButtonCs510"
@@ -29,8 +34,10 @@
 
     <Button
         android:id="@+id/ButtonCs530"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"
         android:layout_marginTop="48dp"
         android:text="CS530"
         app:layout_constraintEnd_toEndOf="@+id/ButtonCs520"
@@ -39,9 +46,11 @@
 
     <Button
         android:id="@+id/ButtonCs540"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"
         android:text="CS540"
         app:layout_constraintEnd_toEndOf="@+id/ButtonCs530"
         app:layout_constraintStart_toStartOf="@+id/ButtonCs530"
@@ -49,8 +58,10 @@
 
     <Button
         android:id="@+id/ButtonCs550"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"
         android:layout_marginTop="48dp"
         android:text="CS550"
         app:layout_constraintEnd_toEndOf="@+id/ButtonCs540"
@@ -59,9 +70,11 @@
 
     <Button
         android:id="@+id/ButtonMaths"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"
         android:text="MA510"
         app:layout_constraintEnd_toEndOf="@+id/ButtonCs550"
         app:layout_constraintStart_toStartOf="@+id/ButtonCs550"

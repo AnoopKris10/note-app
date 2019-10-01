@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#363837"
     tools:context=".HomePage">
 
     <ScrollView
@@ -28,7 +29,8 @@
                 android:orientation="vertical">
 
                 <Button
-
+                    android:background="@drawable/rounded_button"
+                    android:textColor="#FFFFFF"
                     android:id="@+id/ButtonSem1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -43,11 +45,11 @@
                 android:orientation="vertical">
 
                 <Button
+                    android:background="@drawable/rounded_button"
+                    android:textColor="#FFFFFF"
                     android:id="@+id/ButtonSem2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
-
                     android:text="Semester 2"
                     tools:layout_marginTop="50dp" />
             </LinearLayout>
@@ -60,13 +62,11 @@
                 android:orientation="vertical">
 
                 <Button
-
+                    android:background="@drawable/rounded_button"
+                    android:textColor="#FFFFFF"
                     android:id="@+id/ButtonSem3"
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
-
                     android:text="Semester 3"
                     tools:layout_marginTop="50dp" />
             </LinearLayout>
@@ -79,6 +79,8 @@
                 android:orientation="vertical">
 
                 <Button
+                    android:background="@drawable/rounded_button"
+                    android:textColor="#FFFFFF"
                     android:id="@+id/ButtonSem4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -95,6 +97,8 @@
                 android:orientation="vertical">
 
                 <Button
+                    android:background="@drawable/rounded_button"
+                    android:textColor="#FFFFFF"
                     android:id="@+id/ButtonSem5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -110,6 +114,8 @@
                 android:orientation="vertical">
 
                 <Button
+                    android:background="@drawable/rounded_button"
+                    android:textColor="#FFFFFF"
                     android:id="@+id/ButtonSem6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -125,6 +131,8 @@
                 android:orientation="vertical">
 
                 <Button
+                    android:background="@drawable/rounded_button"
+                    android:textColor="#FFFFFF"
                     android:id="@+id/ButtonSem7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -140,6 +148,8 @@
                 android:orientation="vertical">
 
                 <Button
+                    android:background="@drawable/rounded_button"
+                    android:textColor="#FFFFFF"
                     android:id="@+id/ButtonSem8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -155,6 +165,8 @@
                 android:orientation="vertical">
 
                 <Button
+                    android:background="@drawable/rounded_button"
+                    android:textColor="#FFFFFF"
                     android:id="@+id/ButtonLogout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
