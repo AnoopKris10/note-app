@@ -41,7 +41,7 @@ public class ForgotPasswordPage extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
-                                        Toast.makeText(ForgotPasswordPage.this,"Please check your mail for recovery",Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(ForgotPasswordPage.this,"Please check your mail to reset your password ",Toast.LENGTH_SHORT).show();
                                         //startActivity(new Intent(ForgotPassword.this,LogIn.class));
                                     }
                                     else{
@@ -73,7 +73,7 @@ public class ForgotPasswordPage extends AppCompatActivity {
 
         }
         else{
-            Toast.makeText(ForgotPasswordPage.this,"Please enter email",Toast.LENGTH_SHORT).show();
+            Toast.makeText(ForgotPasswordPage.this,"Please enter your E-mail address",Toast.LENGTH_SHORT).show();
             return false;
         }
         }
