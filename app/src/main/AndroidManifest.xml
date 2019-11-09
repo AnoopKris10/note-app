@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.notesrepo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,9 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserDetailsInput"></activity>
-        <activity android:name=".CS510Page" />
-        <activity android:name=".Semester5Activity" />
+        <activity android:name=".UploadDownloadPage"></activity>
+        <activity android:name=".CourseDisplayPage" />
+        <activity android:name=".UserDetailsInput" />
         <activity android:name=".ForgotPasswordPage" />
         <activity android:name=".SignUpPage" />
         <activity android:name=".HomePage" />
@@ -24,8 +27,5 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

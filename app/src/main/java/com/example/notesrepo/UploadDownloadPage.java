@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class CS510Page extends AppCompatActivity {
+public class UploadDownloadPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cs510_page);
+        setContentView(R.layout.activity_upload_download_page);
     }
 }

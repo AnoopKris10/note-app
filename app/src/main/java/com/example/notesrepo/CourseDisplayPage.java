@@ -1,12 +1,5 @@
 package com.example.notesrepo;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +7,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -26,24 +23,22 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class HomePage extends AppCompatActivity {
+public class CourseDisplayPage extends AppCompatActivity {
 
     private Toolbar mToolbar;
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
-    public ArrayList<String> Semesterlist = new ArrayList<>();
-
+    public ArrayList<String> Courselist = new ArrayList<>();
 
     FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
+        setContentView(R.layout.activity_course_display_page);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -52,12 +47,12 @@ public class HomePage extends AppCompatActivity {
         setSupportActionBar(mToolbar);
 
         final ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("HOME");
+        actionBar.setTitle("COURSES");
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        mDrawerLayout = findViewById(R.id.drawerlayout);
-        mNavigationView = findViewById(R.id.navigationview);
-        mRecyclerView = findViewById(R.id.HomeRecyclerView);
+        mDrawerLayout = findViewById(R.id.drawerlayout2);
+        mNavigationView = findViewById(R.id.navigationview2);
+        mRecyclerView = findViewById(R.id.CourseRecyclerView);
 
 
         final FirebaseUser user = mAuth.getCurrentUser();
@@ -78,7 +73,7 @@ public class HomePage extends AppCompatActivity {
                     case R.id.navlogout:
                         menuItem.setChecked(true);
                         mAuth.getInstance().signOut();
-                        startActivity(new Intent(HomePage.this, LoginPage.class));
+                        startActivity(new Intent(CourseDisplayPage.this, LoginPage.class));
                         finish();
                         return true;
 
@@ -92,13 +87,16 @@ public class HomePage extends AppCompatActivity {
 
         });
 
+        final Bundle bundle = this.getIntent().getExtras();
+        String selectedSemester = bundle.getString("Semester");
 
-        final RecyclerView SemesterHomeRecyclerView = (RecyclerView)findViewById(R.id.HomeRecyclerView);
-        SemesterHomeRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        SemesterHomeRecyclerView.setHasFixedSize(true);
+        final RecyclerView CourseRecyclerView = (RecyclerView)findViewById(R.id.CourseRecyclerView);
+        CourseRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        CourseRecyclerView.setHasFixedSize(true);
 
-
-        CollectionReference mCollectionReference = mFirestoreDB.collection("Notes");
+        CollectionReference mCollectionReference = mFirestoreDB.collection("Notes")
+                .document(selectedSemester)
+                .collection("Subjects");
         mCollectionReference.get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -108,24 +106,15 @@ public class HomePage extends AppCompatActivity {
 
                             for(QueryDocumentSnapshot documentSnapshot: task.getResult()) {
 
-                                String SemString = documentSnapshot.getId();
-                                Semesterlist.add(SemString);
+                                String CourseString = documentSnapshot.getId();
+                                Courselist.add(CourseString);
                             }
-                                HomeRecyclerAdapter mHomeRecyclerAdapter = new HomeRecyclerAdapter(HomePage.this,Semesterlist);
-                                SemesterHomeRecyclerView.setAdapter(mHomeRecyclerAdapter);
-                            }
-
+                            CourseRecyclerAdapter mCourseRecyclerAdapter = new CourseRecyclerAdapter(CourseDisplayPage.this,Courselist,bundle);
+                            CourseRecyclerView.setAdapter(mCourseRecyclerAdapter);
                         }
-                    });
 
-
+                    }
+                });
 
     }
 }
-
-
-
-
-
-
-
