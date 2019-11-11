@@ -53,7 +53,7 @@ public class HomePage extends AppCompatActivity {
 
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("HOME");
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(false);
 
         mDrawerLayout = findViewById(R.id.drawerlayout);
         mNavigationView = findViewById(R.id.navigationview);

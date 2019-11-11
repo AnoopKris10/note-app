@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -92,6 +93,8 @@ public class DownloadAdapter extends RecyclerView.Adapter<DownloadAdapter.Downlo
         request.setDestinationInExternalFilesDir(context,destinationDirectory,filename+fileExtension);
 
         downloadManager.enqueue(request);
+
+        Toast.makeText(mContext,"PDF is downloading!!.....",Toast.LENGTH_LONG).show();
 
     }
 

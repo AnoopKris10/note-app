@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".UploadDownloadPage"></activity>
-        <activity android:name=".CourseDisplayPage" />
+        <activity android:name=".CourseDisplayPage" android:parentActivityName=".HomePage"></activity>
         <activity android:name=".UserDetailsInput" />
         <activity android:name=".ForgotPasswordPage" />
         <activity android:name=".SignUpPage" />
