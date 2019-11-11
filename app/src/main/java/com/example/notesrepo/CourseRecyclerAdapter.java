@@ -57,7 +57,7 @@ public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAd
 
                 Bundle bundle = new Bundle();
 
-                //bundle.putString("Semester",sem.getSemester());
+                bundle.putString("Course",MyCourse);
 
                 Intent intent = new Intent(mContext,UploadDownloadPage.class);
 
