@@ -10,34 +10,35 @@
     <androidx.cardview.widget.CardView
 
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="180dp"
         android:id="@+id/NotesCardView"
         android:layout_margin="5dp">
 
         <ImageView
-        android:id="@+id/NotesImageView"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="20dp"
-        android:contentDescription="TODO"
-        app:srcCompat="@drawable/docs"
-        />
+            android:id="@+id/NotesImageView"
+            android:layout_width="93dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="TODO"
+            app:srcCompat="@drawable/docs" />
+
         <TextView
-        android:id="@+id/DocNameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="160dp"
-        android:text="Doc Name"
-        android:textSize="20sp" />
+            android:id="@+id/DocNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="40dp"
+            android:text="Doc Name"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/UriTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="80dp"
             android:text="Uri"
+            android:visibility="invisible"
             android:textSize="20sp" />
 
         <Button
@@ -45,8 +46,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="270dp"
-            android:layout_marginTop="180dp"
-            android:text="Download"></Button>
+            android:layout_marginTop="90dp"
+            android:background="@drawable/rounded_button"
+            android:text="Download"
+            android:textColor="#ffffff"></Button>
 
 
     </androidx.cardview.widget.CardView>

@@ -4,7 +4,8 @@
     android:layout_height="56dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar"
-    android:background="#363837"
+    app:titleTextColor="#ffffff"
+    android:background="#075e54"
 
 
     />

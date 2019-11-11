@@ -53,6 +53,7 @@ public class SignUpPage extends AppCompatActivity {
         final EditText mPasswordEditTest = (EditText)findViewById(R.id.PasswordSignUpEditText);
         final EditText mReEnterPasswordEditText = (EditText)findViewById(R.id.RePasswordEditText);
         final TextView mLoginNow = findViewById(R.id.LoginNowTextView);
+        final ProgressBar mSignUpProgressBar = findViewById(R.id.SignUpProgressBar);
 
 
         Button mSignUpButton = (Button)findViewById(R.id.SignUpButton);
@@ -75,7 +76,7 @@ public class SignUpPage extends AppCompatActivity {
                 String confirmedPassword = mReEnterPasswordEditText.getText().toString();
 
                 if(isValidFields(email,password,confirmedPassword)){
-
+                    mSignUpProgressBar.setVisibility(View.VISIBLE);
                     if(isPasswordStrong(password)){
                         if(isMatching(password,confirmedPassword)){
 

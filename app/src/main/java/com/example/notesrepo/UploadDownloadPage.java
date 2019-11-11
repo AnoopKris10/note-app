@@ -52,7 +52,7 @@ public class UploadDownloadPage extends AppCompatActivity{
             downloadModelArrayList.clear();
 
        CollectionReference collectionReference = db.collection("Notes")
-                                    .document("Semester 5")
+                                    .document(bundle.getString("Semester"))
                                     .collection("Subjects")
                                     .document(selectedCourse)
                                     .collection("Files");
@@ -79,7 +79,7 @@ public class UploadDownloadPage extends AppCompatActivity{
 
     }
     private void setUpFB() {
-
+        mAuth = FirebaseAuth.getInstance();
         final FirebaseUser user = mAuth.getCurrentUser();
         mAuth = FirebaseAuth.getInstance();
         db=FirebaseFirestore.getInstance();

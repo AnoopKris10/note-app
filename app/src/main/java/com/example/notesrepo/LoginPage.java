@@ -39,9 +39,10 @@ public class LoginPage extends AppCompatActivity {
         final EditText mEmailEditText = (EditText)findViewById(R.id.EmailLoginEditText);
         final EditText mPasswordEditText = (EditText)findViewById(R.id.PasswordLoginEditText);
         final TextView mForgotPasswordTextView = (TextView)findViewById(R.id.ForgotPasswordTextView);
+        final ProgressBar mLoginProgressBar = findViewById(R.id.LoginProgressBar);
         mAuth = FirebaseAuth.getInstance();
 
-        Button mLogInButton = (Button)findViewById(R.id.LoginButton);
+        final Button mLogInButton = (Button)findViewById(R.id.LoginButton);
         final TextView mSignUpTextView = (TextView)findViewById(R.id.RegNowTextView);
 
         mLogInButton.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +55,7 @@ public class LoginPage extends AppCompatActivity {
                 //Check if user has entered email and password fields , if 'YES' proceed ,otherwise toast error messages
 
                 if(validateEntries(email,password)){
+                    mLoginProgressBar.setVisibility(View.VISIBLE);
                     mAuth.signInWithEmailAndPassword(email,password)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override

@@ -19,11 +19,13 @@ public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAd
 
     private ArrayList<String> CourseList = new ArrayList<>();
     private Context mContext;
+    private Bundle bundle;
 
     public CourseRecyclerAdapter(Context context, ArrayList<String> CourseList, Bundle bundle){
 
         this.CourseList=CourseList;
         this.mContext= context;
+        this.bundle = bundle;
     }
 
 
@@ -55,7 +57,7 @@ public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAd
                 // query path should ../selectedSem/Subjects/ under documents
                 // once the list is computed
 
-                Bundle bundle = new Bundle();
+                //Bundle bundle = new Bundle();
 
                 bundle.putString("Course",MyCourse);
 

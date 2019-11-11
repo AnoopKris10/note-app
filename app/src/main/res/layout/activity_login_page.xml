@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#363837"
+    android:background="@drawable/background_start"
     tools:context=".LoginPage">
 
 
@@ -78,12 +78,22 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="190dp"
-        android:layout_height="195dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_noteflix" />
+
+    <ProgressBar
+        android:id="@+id/LoginProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/LoginButton"
+        app:layout_constraintStart_toEndOf="@+id/LoginButton"
+        app:layout_constraintTop_toTopOf="@+id/LoginButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
